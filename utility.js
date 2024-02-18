@@ -16,32 +16,47 @@ for (const allSeatButton of allSeatButtons) {
 
         document.getElementById('current-available-seat').innerText = currentAvalibaleSeat - count;
 
-
+const classCatagory = 'Economoy'
         const seat = e.target.innerText;
-        // console.log(seat)
-        const pushSeat = document.getElementById('show-perchesed-seat');
-        // console.log(pushSeat)
-        const p = document.createElement('p');
-        p.innerText = seat;
-        pushSeat.appendChild(p)
-       
-        const vara = document.getElementById("vara-amount").innerText;
-        const varaConvert = parseInt(vara)
-        // console.log(varaConvert)
-        // const pushVara = getElementById('how-perchesed-vara')
-        // pushVara.appendChild(varaConvert)
 
+        const vara = document.getElementById("vara-amount").innerText;
+        const varaConvrt = parseInt(vara)
+
+// console.log(varaConvrt)
+        //         console.log(seat)
+        
+        const showPurchesSeatInfo = document.getElementById('show-purches-seat-info');
+
+        const li = document.createElement("li")
+
+        const p = document.createElement("p")
+        p.innerText = seat;
+
+        const p1 = document.createElement("p")
+        p1.innerText = classCatagory;
+        const p2=document.createElement("p")
+        p2.innerText = varaConvrt;
+
+        li.appendChild(p)
+        li.appendChild(p1)
+        li.appendChild(p2)
+        showPurchesSeatInfo.appendChild(li)
+
+    //   total cost section
+        const totalCost = document.getElementById('total-price').innerText;
+        const convertTotalCost=parseInt(totalCost)
+        document.getElementById('total-price').innerText = convertTotalCost + varaConvrt;
+
+        // grand total section
+        const grandTotal = document.getElementById('grand-total').innerText;
+        const convartGrandTotal = parseInt(grandTotal);
+        document.getElementById('grand-total').innerText = convartGrandTotal + varaConvrt;
 
     })
 
-    // show-perchesed-vara
+    
 }
 
 
 
-// console.log(bgColorSet)
-// bg color set
-// function setBackgroundColorById(elementId) {
-//     const element = document.getElementById(elementId);
-//     element.classList.add('bg-[#1DD100]');
-// }
+
