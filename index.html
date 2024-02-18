@@ -72,7 +72,7 @@
             <h1 class="mb-5 text-6xl font-[Raleway] font-bold">End-to-End Travel with</h1>
             <h1 class="text-[#1DD100] mb-5 text-6xl font-[Raleway] font-bold">Dream Paribahan</h1>
             <p class="mb-5 max-w-md mx-auto">Due to Special Reserve service, Reserve bus ticket fare might be higher than regular, Customers are requested to check fare before purchase.</p>
-            <button class="btn px-5 py-3 bg-[#1DD100] border-none text-[20px] font-medium ">Buy Tickets</button>
+            <button id="buyTricket" class="btn px-5 py-3 bg-[#1DD100] border-none text-[20px] font-medium ">Buy Tickets</button>
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@
 
 <div class="container mx-auto my-10 bg-[#FFF] rounded-lg flex justify-around items-center">
 <!-- l side -->
-        <div class="space-y-5">
+        <div class="space-y-5 border border-red-500 ">
         <div class="flex justify-between items-center">
     
             <div class="flex items-center gap-2">
@@ -195,11 +195,13 @@
 <img class="" src="./images/info-devider.png" alt="">
 
 <div class="pr">
-    <img class="pl-6" src="./images/fare.png" alt="">
-    <div>
-        <h1 class="font-[Raleway] text-2xl font-bold">550 Taka</h1>
-    <p class="font-[Raleway] text-[#03071299] font-bold">Per Seat</p>
-    </div>
+    <div class="flex flex-col text-center justify-center">
+        <div><img class="pl-6" src="./images/fare.png" alt=""></div>
+        <div>
+            <h1 id="vara-amount" class="font-[Raleway] text-2xl font-bold"> 550 Taka </h1>
+        <p class="font-[Raleway] text-[#03071299] font-bold">Per Seat</p>
+        </div>
+        </div>
     </div>
 </div> 
 
@@ -325,7 +327,9 @@
 
 <!-- show perchesed ticket -->
 <hr>
-<p id="show-perchesed-ticket" class=""></p>
+<p id="show-perchesed-seat" class=""></p>
+<p id="show-perchesed-" class=""></p>
+<p id="show-perchesed-vara" class=""></p>
 <hr>
 <!-- total price show -->
 <div class="flex justify-between ">
