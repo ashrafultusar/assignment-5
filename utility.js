@@ -71,7 +71,7 @@ for (const allSeatButton of allSeatButtons) {
             document.getElementById("grand-total").innerText =
                 convartGrandTotal * 0.15;
         }else {
-            console.log('NOT')
+            alert
         }
     })
     
