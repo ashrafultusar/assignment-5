@@ -47,6 +47,7 @@ const classCatagory = 'Economoy'
         const convertTotalCost=parseInt(totalCost)
         document.getElementById('total-price').innerText = convertTotalCost + varaConvrt;
 
+        
         // grand total section
         const grandTotal = document.getElementById('grand-total').innerText;
         const convartGrandTotal = parseInt(grandTotal);
