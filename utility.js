@@ -4,7 +4,8 @@ const allSeatButtons = document.getElementsByClassName("kbd");
 
 let count = 0;
 let currentAvalibaleSeat = 40;
-
+let coupon15 = 'NEW15'
+let coupon20 ='Couple 20'
 for (const allSeatButton of allSeatButtons) {
     // console.log(allSeatButton)
     allSeatButton.addEventListener('click', function (e) {
@@ -58,6 +59,33 @@ const classCatagory = 'Economoy'
     
 }
 
+function play() {
+    const homeScreen = document.getElementById('home-screen');
+   homeScreen.classList.add('hidden')
+    const popup = document.getElementById('popup');
+    popup.classList.remove('hidden')
+
+}
+
+const applyBtn = document.getElementById('apply-btn');
+// console.log(applyBtn)
+
+// applyBtn.addEventListener("click", function () {
+//     // console.log('alhamdulliah')
+
+//     const inputCoupon = document.getElementById('input-coupon');
+//     // console.log(inputCoupon.value)
+    
+//     if ( coupon15 === 'NEW15'){
+   
+//         const discout = varaConvrt * 0.15
+//         const finalDiscountValue = document.getElementById('grand-total');
+//         finalDiscountValue.innerText = varaConvrt - discout;
 
 
-
+//     } else if (coupon20 === 'Couple 20'){
+//         console.log('25')
+// }else {
+//     alert ('vul hoyce vai')
+//     }
+// })

@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <section class="">
+    <section id="home-screen" class="">
     <!-- nav bar section -->
 <nav class="container mx-auto pt-4">
 
@@ -139,7 +139,7 @@
 
 
 
-<section class="bg-[#F7F8F8] ">
+<section class="bg-[#F7F8F8] rounded-t-[90px]">
 
 
        <!-- text -->
@@ -210,9 +210,7 @@
 <!-- seat select section -->
 
 
-
-
-<div class=" container mx-auto flex gap-4 bg-[#FFF] rounded-lg ">
+<div class=" container mx-auto flex gap-4 bg-[#FFF] mb-12 rounded-lg ">
     
 <div class="w-[70%]">
     <h1 class="font-[ Raleway] text-[24px] font-semibold pl-3">Select Your Seat</h1>
@@ -339,8 +337,8 @@
 
 
 <div class="flex justify-center items-center mt-4  ">
-    <input class="px-2 py-1  " type="text" placeholder="Have any copupon?">
-    <button class="bg-[#1DD100] px-4 py-1 rounded-md ">Apply</button>
+    <input id="input-coupon" class="px-2 py-1  " type="text" placeholder="Have any copupon?">
+    <button id="apply-btn" class="bg-[#1DD100] px-4 py-1 rounded-md ">Apply</button>
 </div>
 
 <div class="flex justify-between mt-4">
@@ -361,7 +359,7 @@
     <input type="text" placeholder="Enter your email id" class="input input-bordered w-full" />
 
 
-    <button class="bg-[#1DD100] w-full px-4 py-3 font-[Raleway] text-sm font-bold rounded-md"  >Next</button>
+    <button onclick="play()" class="bg-[#1DD100] w-full px-4 py-3 font-[Raleway] text-sm font-bold rounded-md"  >Next</button>
 </div>
 
 
@@ -371,21 +369,8 @@
 
 
 </div>
-
-
-
-
-
-
 
 </section>
-
-
-
-
-
-
-
 
 </main>
 
@@ -424,8 +409,8 @@
 <!-- popup -->
 
 
-<section class="score flex justify-center items-center min-h-screen ">
-    <div class=" flex flex-col items-center text-center space-y-2 bg-white border border-red-600 p-4 rounded-lg">
+<section id="popup" class="score hidden flex justify-center items-center min-h-screen ">
+    <div class=" flex flex-col items-center text-center space-y-2 bg-white shadow-xl p-4 rounded-lg">
 
         <div > <img src="./images/success.png" alt=""></div>
 
@@ -441,22 +426,6 @@
  
      </section>
 
-
-
-<!-- 
-<section class="min-h-screen">
-    <div class=" p-4 rounded-lg min-w-[720px] min-h-[480px] flex flex-col justify-center items-center ">
-
-       <div > <img src="./images/success.png" alt=""></div>
-<p class="text-[#27AE60] text-[24px] font-bold rounded-full px-10 py-2">SUCCESS</p>
-<p class="text-sm font-medium text-[Roboto] w-[500px] ">Thank you for Booking Our Bus Seats. 
-    We are working hard to find the best service and deals for you. 
-    Shortly you will find a confirmation in your email.</p>
-    <p class="text-[#4A4A4A] text-[ 20px]">Thank you</p>
-<button class="bg-[#27AE60] rounded-full px-10 py-2 text-white ">Continue</button>
-    </div>
-
-</section> -->
 
 
 
