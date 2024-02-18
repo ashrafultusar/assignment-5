@@ -57,8 +57,24 @@ for (const allSeatButton of allSeatButtons) {
     const grandTotal = document.getElementById("grand-total").innerText;
     const convartGrandTotal = parseInt(grandTotal);
     document.getElementById("grand-total").innerText =
-      convartGrandTotal + varaConvrt;
+          convartGrandTotal + varaConvrt;
+     
   });
+    
+    const applyBtn = document.getElementById("apply-btn");
+    applyBtn.addEventListener("click", function () {
+
+        const inputCoupon = document.getElementById("input-coupon").value;
+        if (coupon15 === inputCoupon) {
+            const grandTotal = document.getElementById("grand-total").innerText;
+    const convartGrandTotal = parseInt(grandTotal);
+            document.getElementById("grand-total").innerText =
+                convartGrandTotal * 0.15;
+        }else {
+            console.log('NOT')
+        }
+    })
+    
 }
 
 function play() {
@@ -68,40 +84,35 @@ function play() {
   popup.classList.remove("hidden");
 }
 
-
 // bonus part section..........................................
 
-const vara = document.getElementById("vara-amount").innerText;
-const varaConvrt = parseInt(vara);
+//  const vara = document.getElementById("vara-amount").innerText;
+// const varaConvrt = parseInt(vara);
 
-const applyBtn = document.getElementById("apply-btn");
+    
+// const applyBtn = document.getElementById("apply-btn");
 
-applyBtn.addEventListener("click", function () {
-  console.log('alhamdulliah')
 
-    const inputCoupon = document.getElementById("input-coupon").value;
-    console.log(inputCoupon)
-    console.log(inputCoupon)
-        console.log(coupon15)
-    if (coupon15 === inputCoupon) {
-        console.log('coupon15')
+// applyBtn.addEventListener("click", function () {
+  
+//     const inputCoupon = document.getElementById("input-coupon").value;
+    
+//     if (coupon15 === inputCoupon) {
         
-        const finalElement = document.getElementById('grand-total')
-        const discount = varaConvrt * 0.15;
-finalElement.innerText=discount
+//         const finalElement = document.getElementById('grand-total')
+//         const discount = varaConvrt * 0.15;
+// finalElement.innerText=discount
 
-        // const finalElement1 = document.getElementById('grand-total')
-        // const discount1 = varaConvrt * 0.15;
-        // finalElement1.value=discount1
-        
 
-    } else if (coupon20 === inputCoupon) {
-        console.log('coupon20')
-    } else {
-        alert('error')
-    }
+//     } else if (coupon20 === inputCoupon) {
+//         console.log('coupon20')
+
+
+//     } else {
+//         return alert('ERROE')
+//     }
   
     
     
-}
-);
+// }
+// );
