@@ -1,38 +1,37 @@
+
 const allSeatButtons = document.getElementsByClassName("kbd");
+
 
 let count = 0;
 let currentAvalibaleSeat = 40;
 
 let selectedTricket = 0;
 
+
 for (const allSeatButton of allSeatButtons) {
 
+
+
   allSeatButton.addEventListener("click", function (e) {
-  
-    // --------------------4 seat check----------------------
-
-    // if (selectedTricket < 4) {
-    //   const isDisabled = allSeatButton.getAttribute("disabled");
-    //   if (!isDisabled) {
-    //     const ticket = allSeatButton.innerText;
-    //     console.log(ticket)
-    //     allSeatButton.setAttribute("disabled", true);
-    //     selectedTricket = selectedTricket + 1;
-        
-
-    //   } else {
-    //     alert("not now")
-    //   }
-    // }
-    
-    // ---------------------------------------------
-   
 
 
     e.target.style.backgroundColor = "green";
     count = count + 1;
 
+
     document.getElementById("purches-seat-count").innerText = count;
+
+
+// 4 seat contition section code
+    if (count == 4) {
+      let allSeatButtons = document.getElementsByClassName('kbd')
+      for (let i = 0; i < allSeatButtons.length; i++){
+        allSeatButtons[i].disabled = true;
+      }
+     
+    }
+
+    // ------------------------
 
     document.getElementById("current-available-seat").innerText =
       currentAvalibaleSeat - count;
@@ -54,6 +53,7 @@ for (const allSeatButton of allSeatButtons) {
     const p = document.createElement("p");
     p.innerText = seat;
 
+  
     const p1 = document.createElement("p");
     p1.innerText = classCatagory;
     const p2 = document.createElement("p");
@@ -91,15 +91,6 @@ function play() {
 }
 
 
-// purches success button
-function success() {
-  const success = document.getElementById('popup');
-  success.classList.add('hidden')
-  const homeScreen = document.getElementById("home-screen");
-  homeScreen.classList.remove("hidden");
-}
-
-
 // bonus part section..........................................
 
 
@@ -114,36 +105,35 @@ applyBtn.addEventListener("click", function () {
   const coupon20 = "Couple 20";
 
 
+  function hide() {
+    const inputCouponArea = document.getElementById('input-coupon-area');
+    inputCouponArea.classList.add('hidden')
+  
+  }
+
   const inputCoupon = document.getElementById("input-coupon").value;
  console.log(inputCoupon)
-    if (coupon15 === inputCoupon) {
+    if ( inputCoupon === coupon15 ) {
       
       firstDiscount = convartFinalDiscount * 0.15
       discount = convartFinalDiscount - firstDiscount;
       
       document.getElementById("grand-total").innerText = discount.toFixed(1)
       document.getElementById("input-coupon").value = "";
-      
-    } else if(coupon20 === inputCoupon) {
+      hide()
+
+    } else if(inputCoupon ===  coupon20) {
      
         discount20 = convartFinalDiscount * 0.20;
       finalDiscount20 = convartFinalDiscount - discount20;
         document.getElementById("grand-total").innerText = finalDiscount20.toFixed(1);
-        document.getElementById("input-coupon").value = "";
+      document.getElementById("input-coupon").value = "";
+      hide()
+
     } else {
       alert('Invalid Coupon')
       document.getElementById("input-coupon").value = "";
+      return;
   }
   
 })
-
-// input fild hide
-function hide() {
-  const inputCouponArea = document.getElementById('input-coupon-area');
-  inputCouponArea.classList.add('hidden')
-
-}
-
-// function scrollDown() {
-//   window.scrollDown
-// }

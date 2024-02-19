@@ -20,3 +20,7 @@ li{
   text-align: center;
   list-style: numeric;
 }
+
+*{
+  scroll-behavior: smooth;
+}
