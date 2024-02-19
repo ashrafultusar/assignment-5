@@ -24,8 +24,7 @@ for (const allSeatButton of allSeatButtons) {
     const vara = document.getElementById("vara-amount").innerText;
     const varaConvrt = parseInt(vara);
 
-    // console.log(varaConvrt)
-    //         console.log(seat)
+   
 
     const showPurchesSeatInfo = document.getElementById(
       "show-purches-seat-info"
@@ -64,6 +63,7 @@ for (const allSeatButton of allSeatButtons) {
     
 }
 
+// popup section
 function play() {
   const homeScreen = document.getElementById("home-screen");
   homeScreen.classList.add("hidden");
@@ -108,3 +108,10 @@ applyBtn.addEventListener("click", function () {
   }
   
 })
+
+// input fild hide
+function hide() {
+  const inputCouponArea = document.getElementById('input-coupon-area');
+  inputCouponArea.classList.add('hidden')
+
+}
