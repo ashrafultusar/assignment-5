@@ -10,19 +10,20 @@ for (const allSeatButton of allSeatButtons) {
   allSeatButton.addEventListener("click", function (e) {
   
     // --------------------4 seat check----------------------
-    if (selectedTricket < 4) {
-      const isDisabled = allSeatButton.getAttribute("disabled");
-      if (!isDisabled) {
-        const ticket = allSeatButton.innerText;
-        console.log(ticket)
-        allSeatButton.setAttribute("disabled", true);
-        selectedTricket = selectedTricket + 1;
+
+    // if (selectedTricket < 4) {
+    //   const isDisabled = allSeatButton.getAttribute("disabled");
+    //   if (!isDisabled) {
+    //     const ticket = allSeatButton.innerText;
+    //     console.log(ticket)
+    //     allSeatButton.setAttribute("disabled", true);
+    //     selectedTricket = selectedTricket + 1;
         
 
-      } else {
-        alert("not now")
-      }
-    }
+    //   } else {
+    //     alert("not now")
+    //   }
+    // }
     
     // ---------------------------------------------
    
@@ -90,6 +91,15 @@ function play() {
 }
 
 
+// purches success button
+function success() {
+  const success = document.getElementById('popup');
+  success.classList.add('hidden')
+  const homeScreen = document.getElementById("home-screen");
+  homeScreen.classList.remove("hidden");
+}
+
+
 // bonus part section..........................................
 
 
@@ -133,3 +143,7 @@ function hide() {
   inputCouponArea.classList.add('hidden')
 
 }
+
+// function scrollDown() {
+//   window.scrollDown
+// }
