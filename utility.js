@@ -1,15 +1,33 @@
 const allSeatButtons = document.getElementsByClassName("kbd");
-// console.log(allSeatButton)
-
-
 
 let count = 0;
 let currentAvalibaleSeat = 40;
 
+let selectedTricket = 0;
+
 for (const allSeatButton of allSeatButtons) {
-  // console.log(allSeatButton)
+
   allSeatButton.addEventListener("click", function (e) {
-    // console.log('inshallah')
+  
+    // --------------------4 seat check----------------------
+    if (selectedTricket < 4) {
+      const isDisabled = allSeatButton.getAttribute("disabled");
+      if (!isDisabled) {
+        const ticket = allSeatButton.innerText;
+        console.log(ticket)
+        allSeatButton.setAttribute("disabled", true);
+        selectedTricket = selectedTricket + 1;
+        
+
+      } else {
+        alert("not now")
+      }
+    }
+    
+    // ---------------------------------------------
+   
+
+
     e.target.style.backgroundColor = "green";
     count = count + 1;
 
@@ -103,7 +121,7 @@ applyBtn.addEventListener("click", function () {
         document.getElementById("grand-total").innerText = finalDiscount20.toFixed(1);
         document.getElementById("input-coupon").value = "";
     } else {
-      alert('Invalid input')
+      alert('Invalid Coupon')
       document.getElementById("input-coupon").value = "";
   }
   
